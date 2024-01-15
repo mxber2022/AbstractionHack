@@ -17,7 +17,7 @@ const config: Config = {
       colors: {
         // Configure your color palette here
         'mine': 'rgb(255, 244, 227)',
-        'chilizNav': "#5f9ea0",
+        'chilizNav': "#f3f4f8",
         'chilizColor': 'rgb(247, 108, 108)',
       },
 

@@ -14,15 +14,15 @@ export const NearWalletConnector = () => {
   };
 
   if (!isConnected) {
-    return <button  className="bg-white text-black rounded p-3 hover:bg-[#e1e1e1]" onClick={handleSignIn}>Connect To NEAR</button>;
+    return <button  className="bg-white text-black rounded p-3 hover:bg-[#e1e1e1]" onClick={handleSignIn}>Connect Near Wallet</button>;
   }
 
   return (
     <div>
-      <p>You are connected as {activeAccountId}</p>
       <div className="">
         <button className="bg-white text-black rounded p-3 hover:bg-[#e1e1e1]" onClick={handleSignout}> Disconnect </button>
       </div>
+      <p>{activeAccountId}</p>
     </div>
   );
 };
