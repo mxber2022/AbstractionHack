@@ -13,6 +13,18 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+
+      colors: {
+        // Configure your color palette here
+        'mine': 'rgb(255, 244, 227)',
+        'chilizNav': "#5f9ea0",
+        'chilizColor': 'rgb(247, 108, 108)',
+      },
+
+      fontFamily: {
+        chiliz: ['Comic Sans MS', 'cursive'],
+      },
+
     },
   },
   plugins: [],
