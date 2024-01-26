@@ -2,6 +2,7 @@
 
 import { NearWalletConnector } from "./NearWalletSelector";
 import Link from "next/link";
+import Model from "./Model";
 
 export default function Nav() {
     return (
@@ -28,10 +29,9 @@ export default function Nav() {
                 </div>
 
               </div>
-              
             </div>
         </nav>
-            
+        <Model/>    
         </>
     )
 }

@@ -19,10 +19,13 @@ export const NearWalletConnector = () => {
 
   return (
     <div>
-      <div className="">
+      <div className="flex justify-between">
         <button className="bg-white text-black rounded p-3 hover:bg-[#e1e1e1]" onClick={handleSignout}> Disconnect </button>
       </div>
-      <p>{activeAccountId}</p>
+
+      <div>
+        <p className="text-red-600">{activeAccountId}</p>
+      </div>
     </div>
   );
 };
