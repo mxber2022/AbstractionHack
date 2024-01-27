@@ -20,6 +20,7 @@ function Model() {
 function ModelComponent() {
   return (
     <group>
+      <boxGeometry args={[2.2, 2.2, 2.2]} />
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} />
       <ModelLoader />
@@ -42,6 +43,7 @@ interface ModelContentProps {
 
 function ModelContent({ url }: ModelContentProps) {
   const gltf = useLoader(GLTFLoader, url);
+  gltf.scene.scale.set(10, 10, 10);
   return <primitive object={gltf.scene} />;
 }
 
