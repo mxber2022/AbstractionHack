@@ -6,6 +6,8 @@ import './globals.css'
 import { MintbaseWalletContextProvider } from "@mintbase-js/react";
 import "@near-wallet-selector/modal-ui/styles.css";
 import { ReplicateProvider } from './utils/replicate';
+import DataProvider from './components/data';
+
 const inter = Inter({ subsets: ['latin'] })
 
 const MintbaseWalletSetup = {
@@ -22,9 +24,11 @@ export default function RootLayout({
   return (
     <MintbaseWalletContextProvider {...MintbaseWalletSetup}>
       <ReplicateProvider>
-      <html lang="en">
-        <body className={inter.className}>{children}</body>
-      </html>
+        <DataProvider>
+          <html lang="en">
+            <body className={inter.className}>{children}</body>
+          </html>
+      </DataProvider>
       </ReplicateProvider>
     </MintbaseWalletContextProvider>
   )
