@@ -137,16 +137,22 @@ const Form: React.FC = () => {
 
     return (
         <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name:</label>
-        <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
+          <div class="flex items-center justify-center">
+            <p class="italic hover:not-italic text-2xl">Mint your 3d Gaming Asset NFT here!</p>
+          </div>
 
-        <label htmlFor="description">Description:</label>
-        <textarea id="description" name="description" value={formData.description} onChange={handleChange} required />
+          <div>
+            <label htmlFor="name">Name:</label>
+            <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
 
-        <label htmlFor="image">Image:</label>
-        <input type="file" id="image" name="image" accept=".glb, model/gltf-binary" onChange={handleImageChange} required />
+            <label htmlFor="description">Description:</label>
+            <textarea id="description" name="description" value={formData.description} onChange={handleChange} required />
 
-        <button type="submit">Mint</button>
+            <label htmlFor="image">Image:</label>
+            <input type="file" id="image" name="image" accept=".glb, model/gltf-binary" onChange={handleImageChange} required />
+
+            <button type="submit">Mint</button>
+          </div>
         </form>
     );
 };
