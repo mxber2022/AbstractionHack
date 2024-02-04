@@ -1,10 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import { constants } from "@/constants";
+//import { constants } from "@/constants";
 import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Model from "../components/Model";
 
 const ImageThumb = ({ token, index }: any) => {
   const imageUrl = token?.media;
@@ -68,9 +69,9 @@ const ImageThumb = ({ token, index }: any) => {
             </audio>
           </div> */}
 
-          <audio src={imageUrl} controls  />
-          
-          <h1 className="tid">{`Token ID: ${token.id}`}</h1>
+          {/* <audio src={imageUrl} controls  /> */}
+          <Model gltfUrl='https://ipfs.io/ipfs/QmVK6qKpiCdBkDNJYtZE3VuZmmRGjjv1iiTGAUyoHwmhov'/>  
+          {/* <h1 className="tid">{`Token ID: ${token.id}`}</h1> */}
 
           {/* <button
             className="absolute top-3 right-3 bg-black text-white rounded p-1 text-xs px-2 py-1.5"

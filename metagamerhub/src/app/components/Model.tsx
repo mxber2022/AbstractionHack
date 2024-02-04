@@ -6,30 +6,37 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
 import { useLoader } from '@react-three/fiber';
 import { OrbitControls } from "@react-three/drei";
 
-function Model() {
+interface ModelProps {
+  gltfUrl: string;
+}
+
+function Model({ gltfUrl }: ModelProps) {
   return (
     <Canvas>
       <Suspense fallback={null}>
         <OrbitControls />
-        <ModelComponent />
+        <ModelComponent gltfUrl={gltfUrl} />
       </Suspense>
     </Canvas>
   );
 }
 
-function ModelComponent() {
+interface ModelComponentProps {
+  gltfUrl: string;
+}
+
+function ModelComponent({ gltfUrl }: ModelComponentProps) {
   return (
     <group>
       <boxGeometry args={[2.2, 2.2, 2.2]} />
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} />
-      <ModelLoader />
+      <ModelLoader gltfUrl={gltfUrl} />
     </group>
   );
 }
 
-function ModelLoader() {
-  const gltfUrl = 'https://ipfs.io/ipfs/QmVK6qKpiCdBkDNJYtZE3VuZmmRGjjv1iiTGAUyoHwmhov';
+function ModelLoader({ gltfUrl }: ModelComponentProps) {
   return (
     <Suspense fallback={null}>
       <ModelContent url={gltfUrl} />

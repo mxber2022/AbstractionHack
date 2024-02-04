@@ -89,8 +89,8 @@ const Form: React.FC = () => {
           const photoFile = "https://ipfs.io/ipfs/bafybeic5gbdr6qdi3qktyzm65wumc6uekj7ypi2ywgybssawpat7pb5klq";
           const titleAndDescription = await getTitleAndDescription(photoFile);
           const refObject = {
-            title: "titleAndDescription.title",
-            description: "titleAndDescription.description",
+            title: "3D NFT Asset",
+            description: "MINTBASE 3D NFT",
             media: photoFile,
           };
           const uploadedData = await uploadReferenceObject(refObject);
