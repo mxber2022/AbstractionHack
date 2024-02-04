@@ -16,11 +16,14 @@
     "@react-three/fiber": "^8.15.15",
     "@types/three": "^0.160.0",
     "dotenv": "^16.4.1",
+    "graphql": "^16.7.1",
+    "graphql-request": "^6.1.0",
     "next": "14.0.4",
     "nft.storage": "^7.1.1",
     "react": "^18",
     "react-dom": "^18",
-    "three": "^0.160.1"
+    "three": "^0.160.1",
+    "usehooks-ts": "^2.12.1"
   },
   "devDependencies": {
     "@types/node": "^20",
