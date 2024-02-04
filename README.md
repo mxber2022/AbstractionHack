@@ -77,6 +77,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-For any inquiries or support, please contact [your-email-address].
+For any inquiries or support, please contact [mxber2022@gmail.com].
 
 Thank you for using our 3D gaming asset app! We hope you enjoy using it.
