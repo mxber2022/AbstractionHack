@@ -43,7 +43,9 @@ export default function Home() {
              <br/> 
              <br/>
              <br/>
-             <h1 className="mintedMusid">MINTED 3D ASSETS</h1> <br/><br/>
+             <br/>
+             <br/>
+             <h1 className="text-xl font-mono font-bold">MINTED 3D ASSETS</h1> <br/><br/>
         <DynamicGrid mdCols={2} nColsXl={4} nColsXXl={6}>
           {!newToken?.media || isLoading ? (
             <div

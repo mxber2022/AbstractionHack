@@ -136,24 +136,36 @@ const Form: React.FC = () => {
       };
 
     return (
-        <form onSubmit={handleSubmit}>
-          <div class="flex items-center justify-center">
-            <p class="italic hover:not-italic text-2xl">Mint your 3d Gaming Asset NFT here!</p>
-          </div>
 
-          <div>
-            <label htmlFor="name">Name:</label>
-            <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
+      <>
+  <div class="flex items-center justify-center bg-gray-100 py-8">
+    <p class="italic hover:not-italic text-2xl text-gray-800 font-semibold">Mint your 3D Gaming Asset NFT here!</p>
+  </div>
 
-            <label htmlFor="description">Description:</label>
-            <textarea id="description" name="description" value={formData.description} onChange={handleChange} required />
+  <form class="flex items-center justify-center mt-8" onSubmit={handleSubmit}>
+    <div class="bg-white p-8 rounded-lg shadow-lg">
+      <div class="mb-4">
+        <label for="name" class="text-gray-700 block font-semibold">Name:</label>
+        <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required class="border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500"/>
+      </div>
 
-            <label htmlFor="image">Image:</label>
-            <input type="file" id="image" name="image" accept=".glb, model/gltf-binary" onChange={handleImageChange} required />
+      <div class="mb-4">
+        <label for="description" class="text-gray-700 block font-semibold">Description:</label>
+        <textarea id="description" name="description" value={formData.description} onChange={handleChange} required class="border border-gray-300 p-2 rounded-md w-full h-24 resize-none focus:outline-none focus:border-blue-500"></textarea>
+      </div>
 
-            <button type="submit">Mint</button>
-          </div>
-        </form>
+      <div class="mb-4">
+        <label for="image" class="text-gray-700 block font-semibold">Image:</label>
+        <input type="file" id="image" name="image" accept=".glb, model/gltf-binary" onChange={handleImageChange} required class="border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500"/>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Mint</button>
+      </div>
+    </div>
+  </form>
+</>
+
     );
 };
 
