@@ -6,6 +6,7 @@ import { constants } from '../constants';
 import { uploadReference } from "@mintbase-js/storage";
 import { generateRandomId } from "../utils/generateRandomId";
 import { useReplicate } from "../utils/replicate";
+const { NFTStorage, File } = require('nft.storage');
 
 interface FormData {
   name: string;
@@ -37,9 +38,13 @@ const Form: React.FC = () => {
         }));
     };
 
-    const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    
-    };
+    const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+      const selectedFile = e.target.files[0];
+      const apiKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDVGYzA0NTUyMzI5ODA5NDI4NDkzY0VDYjdmZkY4RkUxNGY5YkQzOTQiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY4OTk2NjA0NzY5NiwibmFtZSI6IlBhcmlzIn0.9CxIio0ygPmcf8onnQcFrZurTQACHiB8qOgO6tcHEWs"; 
+      const storage = new NFTStorage({ token: apiKey });
+      const ipfsLink = await storage.storeBlob(selectedFile);
+      console.log("ipfsLink: ", ipfsLink);
+  };
 
     const { addRequest } = useReplicate();
 

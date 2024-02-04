@@ -9,7 +9,7 @@ import { ReplicateProvider } from './utils/replicate';
 const inter = Inter({ subsets: ['latin'] })
 
 const MintbaseWalletSetup = {
-  contractAddress: "gamerhub.mintspace2.testnet",
+  contractAddress: "musicai.mintspace2.testnet",
   network: "testnet" as any,
   callbackUrl: "http://localhost:3000",
 };
