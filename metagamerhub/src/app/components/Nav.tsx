@@ -31,7 +31,7 @@ export default function Nav() {
               </div>
             </div>
         </nav>
-         {/* <Model gltfUrl='https://ipfs.io/ipfs/bafkreidn3sv7keoaev5ypxw7nlcr6g63n4q6k4ho4x5hyt5gcywqkxfqai'/>      */}
+          {/* <Model gltfUrl='https://ipfs.io/ipfs/bafybeie56aorp5232ztyovtss34ojc7gsuhnacpmxeumaukor5yvv3keru'/>       */}
         </>
     )
 }

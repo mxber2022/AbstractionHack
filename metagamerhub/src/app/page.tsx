@@ -67,6 +67,7 @@ export default function Home() {
           {tokensFetched?.length > 0 &&
             tokensFetched.map((token: any, index: number) => {
               if (!!blockedNfts && blockedNfts.includes(token?.metadata_id)) {
+                console.log(token?.metadata_id);
                 return null;
               }
 

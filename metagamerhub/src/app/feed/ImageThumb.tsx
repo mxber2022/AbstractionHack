@@ -45,46 +45,21 @@ const ImageThumb = ({ token, index }: any) => {
           passHref
         >
   
-          {/*<Image
-            key={token?.metadata_id}
-            src={`https://image-cache-service-z3w7d7dnea-ew.a.run.app/thumbnail?url=${imageUrl}`}
-            alt={`Token ${index}`}
-            className="object-cover h-full w-full"
-            width={320}
-            height={320}
-            quality={70}
-            priority={index < 5}
-            onError={handleError}
-            placeholder="empty"
-
-            unoptimized
-    />*/}
-
-          
-          {/* <div className="msic">
-            <button onClick={handlePlay}>Play</button>
-            <button onClick={handlePause}>Pause</button>
-            <audio ref={audioRef}>
-              <source src={imageUrl} />
-            </audio>
-          </div> */}
-
           {/* <audio src={imageUrl} controls  /> */}
-          <Model gltfUrl='https://ipfs.io/ipfs/QmVK6qKpiCdBkDNJYtZE3VuZmmRGjjv1iiTGAUyoHwmhov'/>  
-          {/* <h1 className="tid">{`Token ID: ${token.id}`}</h1> */}
 
-          {/* <button
-            className="absolute top-3 right-3 bg-black text-white rounded p-1 text-xs px-2 py-1.5"
-            onClick={(e) => {
-              e.preventDefault();
-              window.open(
-              `https://twitter.com/intent/tweet?url=%0aCheck%20out%20mine%3A%20${window.location.origin}/meta/${decodeURIComponent(token?.metadata_id)}%2F&via=mintbase&text=${constants.twitterText}`,
-              "_blank"
-            );
-            }}
-          >
-            Share
-          </button> */}
+          {
+    (imageUrl === "https://arweave.net/blob:http://localhost:3000/0cb08f4e-2f97-4e43-9956-6ea12254eb5d" ||
+    imageUrl === "https://sapphire-following-turkey-778.mypinata.clo…14TE*MTY5OTQ3MzE0NC4zLjEuMTY5OTQ3MzI1Ni4yNi4wLjA." ||
+    imageUrl === "https://ipfs.io/ipfs/bafybeifc3tbrp6qnivpvhvs5ooopqidjup7246cbiwrola3vkmetsd354u" ||
+    imageUrl === "https://ipfs.io/ipfs/bafybeig7nbkkaqrxlvh2hvmyvfz5cgt2dgv52urdirumcrzbzp4tx4wwau" ||
+    imageUrl === "https://ipfs.io/ipfs/bafybeic5gbdr6qdi3qktyzm65wumc6uekj7ypi2ywgybssawpat7pb5klq" ||
+    imageUrl === "https://sapphire-following-turkey-778.mypinata.cloud/ipfs/QmZ6Fmi4sm283swk91T2vz4tro6x6RGFBGvP6B5yG3fgYz?_gl=1*1cbn3eo*_ga*MTE1ODc1ODI2Ni4xNjk2NzI0ODMz*_ga_5RMPXG14TE*MTY5OTQ3MzE0NC4zLjEuMTY5OTQ3MzI1Ni4yNi4wLjA." ||
+    imageUrl === "https://sapphire-following-turkey-778.mypinata.cloud/ipfs/QmZ6Fmi4sm283swk91T2vz4tro6x6RGFBGvP6B5yG3fgYz?_gl=1*1cbn3eo*_ga*MTE1ODc1ODI2Ni4xNjk2NzI0ODMz*_ga_5RMPXG14TE*MTY5OTQ3MzE0NC4zLjEuMTY5OTQ3MzI1Ni4yNi4wLjA.:") ? 
+    <></> : <Model gltfUrl={imageUrl}/> 
+}
+
+          {/* <Model gltfUrl={imageUrl}/>  */}
+
         </Link>
       </div>
       </>
