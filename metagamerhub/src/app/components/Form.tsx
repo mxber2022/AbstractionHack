@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useMbWallet } from '@mintbase-js/react';
 import { execute, mint } from '@mintbase-js/sdk';
 import { constants } from '../constants';
@@ -38,13 +38,16 @@ const Form: React.FC = () => {
         }));
     };
 
+    const ipfsLinkRef = useRef<string | null>(null);
+
     const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
       const selectedFile = e.target.files[0];
       const apiKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDVGYzA0NTUyMzI5ODA5NDI4NDkzY0VDYjdmZkY4RkUxNGY5YkQzOTQiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY4OTk2NjA0NzY5NiwibmFtZSI6IlBhcmlzIn0.9CxIio0ygPmcf8onnQcFrZurTQACHiB8qOgO6tcHEWs"; 
       const storage = new NFTStorage({ token: apiKey });
       const ipfsLink = await storage.storeBlob(selectedFile);
-      console.log("ipfsLink: ", ipfsLink);
-  };
+      ipfsLinkRef.current = ipfsLink;
+      console.log("ipfsLink: ", ipfsLinkRef);
+    };
 
     const { addRequest } = useReplicate();
 
@@ -86,7 +89,9 @@ const Form: React.FC = () => {
 
         /* Mint Logic */
         try {
-          const photoFile = "https://ipfs.io/ipfs/bafybeic5gbdr6qdi3qktyzm65wumc6uekj7ypi2ywgybssawpat7pb5klq";
+         // const photoFile = "https://ipfs.io/ipfs/bafybeic5gbdr6qdi3qktyzm65wumc6uekj7ypi2ywgybssawpat7pb5klq";
+          const photoFile = `https://ipfs.io/ipfs/${ipfsLinkRef.current}`;
+          console.log(photoFile);
           const titleAndDescription = await getTitleAndDescription(photoFile);
           const refObject = {
             title: "3D NFT Asset",
