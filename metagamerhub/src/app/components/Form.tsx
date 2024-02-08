@@ -47,6 +47,8 @@ const Form: React.FC = () => {
       const ipfsLink = await storage.storeBlob(selectedFile);
       ipfsLinkRef.current = ipfsLink;
       console.log("ipfsLink: ", ipfsLinkRef);
+
+      console.log("f data: ", formData.name);
     };
 
     const { addRequest } = useReplicate();
@@ -94,8 +96,8 @@ const Form: React.FC = () => {
           console.log(photoFile);
           const titleAndDescription = await getTitleAndDescription(photoFile);
           const refObject = {
-            title: "3D NFT Asset",
-            description: "MINTBASE 3D NFT",
+            title: formData.name,
+            description: formData.description,
             media: photoFile,
           };
           const uploadedData = await uploadReferenceObject(refObject);
