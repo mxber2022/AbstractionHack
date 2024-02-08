@@ -53,6 +53,7 @@ const ImageThumb = ({ token, index }: any) => {
     imageUrl === "https://ipfs.io/ipfs/bafybeifc3tbrp6qnivpvhvs5ooopqidjup7246cbiwrola3vkmetsd354u" ||
     imageUrl === "https://ipfs.io/ipfs/bafybeig7nbkkaqrxlvh2hvmyvfz5cgt2dgv52urdirumcrzbzp4tx4wwau" ||
     imageUrl === "https://ipfs.io/ipfs/bafybeic5gbdr6qdi3qktyzm65wumc6uekj7ypi2ywgybssawpat7pb5klq" ||
+    imageUrl === "https://ipfs.io/ipfs/bafybeiawaqmwsmkrasy6aerxtv25rnelcpg3gr6lhyjrvxowytdjjwwaiu" ||
     imageUrl === "https://sapphire-following-turkey-778.mypinata.cloud/ipfs/QmZ6Fmi4sm283swk91T2vz4tro6x6RGFBGvP6B5yG3fgYz?_gl=1*1cbn3eo*_ga*MTE1ODc1ODI2Ni4xNjk2NzI0ODMz*_ga_5RMPXG14TE*MTY5OTQ3MzE0NC4zLjEuMTY5OTQ3MzI1Ni4yNi4wLjA." ||
     imageUrl === "https://sapphire-following-turkey-778.mypinata.cloud/ipfs/QmZ6Fmi4sm283swk91T2vz4tro6x6RGFBGvP6B5yG3fgYz?_gl=1*1cbn3eo*_ga*MTE1ODc1ODI2Ni4xNjk2NzI0ODMz*_ga_5RMPXG14TE*MTY5OTQ3MzE0NC4zLjEuMTY5OTQ3MzI1Ni4yNi4wLjA.:") ? 
     <></> : <Model gltfUrl={imageUrl}/> 
